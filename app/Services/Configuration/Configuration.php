@@ -180,7 +180,7 @@ class Configuration
         $object->skipForm            = $array['skip_form'] ?? false;
         $object->accounts            = $array['accounts'] ?? [];
 
-        if ('partial' === $array['date_range']) {
+        if ('partial' === $object->dateRange) {
             $object->dateNotBefore = self::calcDateNotBefore($object->dateRangeUnit, $object->dateRangeNumber);
         }
 
